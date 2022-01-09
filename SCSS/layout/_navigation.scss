@@ -21,6 +21,10 @@
   }
 }
 
+.fixed {
+  position: fixed;
+}
+
 .navigation {
   @include navigation();
   justify-content: space-between;

@@ -4,6 +4,14 @@
     box-sizing: border-box;
   }
 
+  .scroll-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+  }
+
   .container {
     max-width: 980px;
     width: 95%;
@@ -24,21 +32,16 @@
     position: absolute;
     padding-top: 1em;
   }
-  
+
   .container_hero {
     @include container_basic(100vh);
-  }
-
-  .container_hero::before {
-    content: "";
     background-image: url("/dist/img/7rn8ej4ze714s1fo8mw3oycisng1snms.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
-    z-index: -1;
-    position: absolute;
   }
   
   .container_full_hero {

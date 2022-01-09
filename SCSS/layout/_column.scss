@@ -42,3 +42,9 @@
     @include col-content(35%, center);
     margin: 0 auto;
 }
+
+.col-center-wide {
+  @include col-content(100%, center);
+  text-align: center;
+  margin: 0 auto;
+}
