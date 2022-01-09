@@ -1,0 +1,34 @@
+@mixin footer {
+  h3 {
+      padding: 1em;
+  }
+
+  p {
+      padding-bottom: 1.5em;
+      font-size: .9rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-bottom: 1.8em;
+  }
+
+  li {
+    padding-bottom: 0.3em;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    color: #fff;
+  }
+}
+
+footer {
+  @include footer();
+  text-align: center;
+}

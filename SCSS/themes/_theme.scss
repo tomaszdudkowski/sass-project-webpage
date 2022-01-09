@@ -1,7 +1,15 @@
 // theme variables
 
 $background-color: #ffffff;
-$background-nav-color: #2b2b2b33;
+$background-dark-color: #2b2b2b8f;
 $primary-color: #033747;
-$accent-color: #325c69;
+$accent-color: #aeb0b152;
+
+.primary-bg {
+    background-color: $primary-color;
+}
+
+.accent-bg {
+    background-color: $accent-color;
+}
 
