@@ -28,6 +28,10 @@
   }
 }
 
+.col-padding {
+  padding: 1em;
+}
+
 @mixin col-content($width, $position) {
     flex-direction: column;
     justify-content: $position;
