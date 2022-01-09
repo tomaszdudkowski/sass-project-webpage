@@ -1,0 +1,152 @@
+// Typography SCSS file
+
+// Google Fonts imports
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+// typography variables
+$text-light-color: #eaf3f7;
+$text-dark-color: #023634;
+$text-accent-color: #033747;
+
+$title-dark-color: #325c69;
+$title-light-color: #fff;
+
+$link-light-color: #829ce8;
+$link-dark-color: #002699;
+
+$xlight-weight: 200; // extra-light
+$light-weight: 300;
+$regular-weight: 400;
+$medium-weight: 500;
+$bold-weight: 600; // semi-bold
+
+$h-font-family: "Lora", sans-serif;
+$p-font-family: "Montserrat", sans-serif;
+
+$h-padding-left: 1rem; //.4210em 16px
+$h-padding-right: 0em;
+
+$h1-font-size: 3rem;
+$h1-padding-top: .2em;
+$h1-padding-bottom: 1em;
+
+$h2-font-size: 2.375rem; // 38px
+$h2-padding-top: .1em;
+$h2-padding-bottom: .4em;
+
+$h3-font-size: 1.6rem;
+$h3-padding-top: .3em;
+$h3-padding-bottom: 1em;
+
+$p-font-size: 1rem;
+$p-padding-top: .5em;
+$p-padding-bottom: .8em;
+$p-small-padding-top: .5em;
+$p-small-padding-bottom: .1em;
+$p-padding-left: 1em;
+$p-padding-right: 1em;
+
+$a-font-size: 1rem;
+$a-padding-top: .4em;
+$a-padding-bottom: 1em;
+
+// colors class
+// only for basic text without color
+
+.light-color {
+  color: $text-light-color;
+}
+
+.dark-color {
+  color: $text-dark-color;
+}
+
+.title-dark-color {
+    color: $title-dark-color;
+}
+
+// headers tags
+
+%h {
+  font-family: $h-font-family;
+}
+
+h1 {
+  @extend %h;
+  font-size: $h1-font-size;
+  padding-top: $h1-padding-top;
+  padding-bottom: $h1-padding-bottom;
+  padding-left: $h-padding-left;
+  padding-right: $h-padding-right;
+}
+
+h2 {
+  @extend %h;
+  font-size: $h2-font-size;
+  padding-top: $h2-padding-top;
+  padding-bottom: $h2-padding-bottom;
+  padding-left: $h-padding-left;
+  padding-right: $h-padding-right;
+  font-weight: $bold-weight;
+}
+
+h3 {
+  @extend %h;
+  font-size: $h3-font-size;
+  padding-top: $h3-padding-top;
+  padding-bottom: $h3-padding-bottom;
+  padding-left: $h-padding-left;
+  padding-right: $h-padding-right;
+}
+
+// paragraph tag
+
+%p {
+  font-family: $p-font-family;
+}
+
+p {
+  @extend %p;
+  font-size: $p-font-size;
+  padding-top: $p-padding-top;
+  padding-bottom: $p-padding-bottom;
+  padding-left: $p-padding-left;
+  padding-right: $p-padding-right;
+}
+// paragraph styles
+.basic {
+  font-weight: $medium-weight;
+}
+
+.small {
+    font-weight: $regular-weight;
+    font-family: $h-font-family;
+    padding-top: $p-small-padding-top;
+    padding-bottom: $p-small-padding-bottom;
+}
+
+.accent {
+  font-weight: $bold-weight;
+  color: $text-accent-color;
+}
+
+.italic {
+  font-style: italic;
+}
+
+// link tag
+
+a {
+  font-family: $p-font-family;
+  font-size: $a-font-size;
+  font-weight: $light-weight;
+  text-decoration: none;
+  color: $link-light-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $link-dark-color;
+  }
+}

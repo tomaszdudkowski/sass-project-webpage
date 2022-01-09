@@ -1,0 +1,37 @@
+@mixin container_basic($height) {
+    height: $height;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .container {
+    max-width: 980px;
+    width: 95%;
+    margin: 0 auto;
+  }
+
+  .container_basic {
+    @include container_basic(100vh);
+    max-width: 980px;
+    width: 95%;
+  }
+  
+  .container_navigation {
+    @include container_basic(14vh);
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .container_hero {
+    @include container_basic(86vh);
+  }
+  
+  .container_full_hero {
+    @include container_basic(100vh);
+  }
+  
+  .container_infinity {
+    @include container_basic(auto);
+    height: auto;
+    padding-bottom: 2.5em;
+  }
