@@ -1,3 +1,7 @@
+// File: _theme.scss
+// Author: Tomasz Dudkowski
+// 2022
+
 // theme variables
 
 $background-color: #ffffff;
@@ -5,14 +9,17 @@ $background-dark-color: #2b2b2b8f;
 $primary-color: #033747;
 $accent-color: #aeb0b152;
 
+// Primary background color
 .primary-bg {
     background-color: $primary-color;
 }
 
+// Accent background color
 .accent-bg {
     background-color: $accent-color;
 }
 
+// Backgound with image cover
 .bg-image {
     background-color: $background-color;
 }

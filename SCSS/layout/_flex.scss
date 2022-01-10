@@ -1,7 +1,12 @@
+// File: _flex.scss
+// Author: Tomasz Dudkowski
+// 2022
+
 @mixin flex-direction($direction) { // direction: row / column
     flex-direction: $direction;
 }
 
+// Set flex
 .flex {
     display: flex;
 }

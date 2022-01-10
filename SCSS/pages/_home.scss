@@ -1,13 +1,20 @@
+// File: _home.scss
+// Author: Tomasz Dudkowski
+// 2022
+
 body {
-    overflow: hidden;
+  // Smooth scroll
+    overflow: hidden; 
     height: 100vh;
 }
 
 section {
+  // Scroll center snap
     scroll-snap-align: center;
 }
 
-@mixin img-cover($position) {
+// Set image cover position
+@mixin img-cover($position) { // $position = left / center / right
   margin: 0 auto;
   box-sizing: content-box;
   width: 100%;
@@ -16,6 +23,7 @@ section {
   object-position: $position;
 }
 
+// image cover class
 .cover-left {
   @include img-cover(left);
 }
@@ -28,6 +36,7 @@ section {
   @include img-cover(right);
 }
 
+// circle image class
 .circle-img {
   @include img-cover(center);
   height: 65%;
@@ -35,6 +44,7 @@ section {
   border-radius: 50%;
 }
 
+// Background with image
 .background-img {
   width: 100%;
 }

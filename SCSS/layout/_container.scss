@@ -1,38 +1,52 @@
-@mixin container_basic($height) {
+// File: _container.scss
+// Author: Tomasz Dudkowski
+// 2022
+
+// Basic container
+@mixin container_basic($height) { // $height = *vh
     height: $height;
     margin: 0 auto;
     box-sizing: border-box;
   }
 
+  // Container for smooth scroll function
   .scroll-container {
     width: 100%;
     height: 100%;
+
+    // smooth scroll
     overflow-y: scroll;
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
   }
 
+  // 980px container
   .container {
     max-width: 980px;
     width: 95%;
     margin: 0 auto;
   }
 
+  // 980px 100 view height container
   .container_basic {
     @include container_basic(100vh);
     max-width: 980px;
     width: 95%;
   }
   
+  // 14vh navigation container
   .container_navigation {
     @include container_basic(14vh);
     width: 100%;
     max-width: 100%;
-    z-index: 1;
+
+    // no bg (transparent option)
+    z-index: 1; 
     position: absolute;
     padding-top: 1em;
   }
 
+  // Hero container 100vh
   .container_hero {
     @include container_basic(100vh);
     background-image: url("/dist/img/7rn8ej4ze714s1fo8mw3oycisng1snms.jpg");
@@ -44,10 +58,12 @@
     height: 100vh;
   }
   
+  // Clean Hero container 100vh without background.
   .container_full_hero {
     @include container_basic(100vh);
   }
   
+  // Infinity container - (infinity height)
   .container_infinity {
     @include container_basic(auto);
     height: auto;
