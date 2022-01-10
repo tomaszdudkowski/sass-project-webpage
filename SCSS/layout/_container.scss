@@ -15,11 +15,16 @@
     height: 100%;
 
     // smooth scroll
-    overflow-y: scroll;
+    overflow-y: auto;
+    
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
   }
 
+  .scroll-container::-webkit-scrollbar {
+    
+    background-color: rgb(31, 31, 31);
+}
   // 980px container
   .container {
     max-width: 980px;
@@ -37,12 +42,11 @@
   // 14vh navigation container
   .container_navigation {
     @include container_basic(14vh);
-    width: 100%;
+    width:  100%;
     max-width: 100%;
 
     // no bg (transparent option)
     z-index: 1; 
-    position: absolute;
     padding-top: 1em;
   }
 

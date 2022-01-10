@@ -3,14 +3,15 @@
 // 2022
 
 body {
-  // Smooth scroll
-    overflow: hidden; 
+  // Smooth scroll 
     height: 100vh;
+    overflow-y: hidden;
 }
 
 section {
   // Scroll center snap
     scroll-snap-align: center;
+    position: relative;
 }
 
 // Set image cover position

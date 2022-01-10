@@ -2,6 +2,9 @@
 // Author: Tomasz Dudkowski
 // 2022
 
+@use "../themes/theme";
+@use "../base/typography";
+
 @mixin navigation {
   nav {
     padding-top: 1em;
@@ -32,4 +35,28 @@
 .navigation {
   @include navigation();
   justify-content: space-between;
+}
+
+.navigation-scrolled {
+  background-color: theme.$background-dark-color;
+  height: 6vh;
+  padding-top: 0;
+
+  nav {
+    padding-top: .2em;
+  }
+
+  nav ul {
+    padding-top: 1em;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+    padding-top: .4em;
+  }
+
+  p {
+    display: none;
+  }
+
 }
