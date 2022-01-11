@@ -2,10 +2,25 @@
 // Author: Tomasz Dudkowski
 // 2022
 
+@use "../themes/theme";
+
 html {
   // Smooth scroll always for html tag
   scroll-behavior: smooth;
   scroll-snap-type: y mandatory;
+}
+
+body::-webkit-scrollbar {
+  width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: theme.$accent-color;
+  border-radius: 30px;
 }
 
 section {

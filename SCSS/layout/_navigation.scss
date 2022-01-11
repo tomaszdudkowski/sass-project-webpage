@@ -32,6 +32,10 @@
   position: fixed;
 }
 
+.absolute {
+  position: absolute;
+}
+
 .navigation {
   @include navigation();
   justify-content: space-between;
@@ -41,6 +45,7 @@
   background-color: theme.$background-dark-color;
   height: 6vh;
   padding-top: 0;
+  transition: 500ms ease-in;
 
   nav {
     padding-top: .2em;

@@ -25,7 +25,7 @@
   
   // 14vh navigation container
   .container_navigation {
-    @include container_basic(14vh);
+    @include container_basic(10vh);
     width:  100%;
     max-width: 100%;
 

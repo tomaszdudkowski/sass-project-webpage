@@ -7,11 +7,15 @@ const sectionObserver = new IntersectionObserver(function (
   entries,
   sectionObserver
 ) {
-  entries.forEach(entry => {
-    if(!entry.isIntersecting) {
-        header.classList.add("navigation-scrolled");
+  entries.forEach((entry) => {
+    if (!entry.isIntersecting) {
+      header.classList.add("navigation-scrolled");
+      header.classList.remove("absolute");
+      header.classList.add("fixed");
     } else {
-        header.classList.remove("navigation-scrolled");
+      header.classList.remove("fixed");
+      header.classList.add("absolute");
+      header.classList.remove("navigation-scrolled");
     }
   });
 },
