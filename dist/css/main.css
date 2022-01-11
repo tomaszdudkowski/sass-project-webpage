@@ -103,19 +103,6 @@ a:hover, a:focus {
     flex-direction: column;
   }
 }
-.scroll-container {
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  scroll-behavior: smooth;
-  -ms-scroll-snap-type: y mandatory;
-      scroll-snap-type: y mandatory;
-}
-
-.scroll-container::-webkit-scrollbar {
-  background-color: #1f1f1f;
-}
-
 .container {
   max-width: 980px;
   width: 95%;
@@ -282,14 +269,13 @@ a:hover, a:focus {
   display: none;
 }
 
-body {
-  height: 100vh;
-  overflow-y: hidden;
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 section {
   scroll-snap-align: center;
-  position: relative;
 }
 
 .cover-left {
@@ -297,10 +283,8 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
+  object-fit: cover;
+  object-position: left;
 }
 
 .cover-center {
@@ -308,10 +292,8 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
 }
 
 .cover-right {
@@ -319,10 +301,8 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: right;
-     object-position: right;
+  object-fit: cover;
+  object-position: right;
 }
 
 .circle-img {
@@ -330,10 +310,8 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  object-fit: cover;
+  object-position: center;
   height: 65%;
   width: 100%;
   border-radius: 50%;
@@ -389,4 +367,6 @@ footer a:focus {
 footer section.container-infinity {
   width: 60%;
   margin: 0 auto;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

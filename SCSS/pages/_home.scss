@@ -2,16 +2,15 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-body {
-  // Smooth scroll 
-    height: 100vh;
-    overflow-y: hidden;
+html {
+  // Smooth scroll always for html tag
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 }
 
 section {
   // Scroll center snap
     scroll-snap-align: center;
-    position: relative;
 }
 
 // Set image cover position
