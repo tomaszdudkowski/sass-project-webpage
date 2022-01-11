@@ -53,6 +53,7 @@ $p-small-padding-top: .5em;
 $p-small-padding-bottom: .1em;
 $p-padding-left: 1em;
 $p-padding-right: 1em;
+$p-line-height: 1.6em;
 
 // link parameters
 $a-font-size: 1rem;
@@ -125,6 +126,7 @@ p {
   padding-bottom: $p-padding-bottom;
   padding-left: $p-padding-left;
   padding-right: $p-padding-right;
+  line-height: $p-line-height;
 }
 // paragraph styles
 .basic {
