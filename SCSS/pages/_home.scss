@@ -63,6 +63,16 @@ section {
   border-radius: 50%;
 }
 
+// fade-in effect
+.fade-in {
+  opacity: 0;
+  transition: opacity 250ms ease-in;
+}
+
+.appear {
+  opacity: 1;
+}
+
 // Background with image
 .background-img {
   width: 100%;
