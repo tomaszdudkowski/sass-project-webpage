@@ -60,6 +60,16 @@ $a-font-size: 1rem;
 $a-padding-top: .4em;
 $a-padding-bottom: 1em;
 
+// Typographic tweaks!
+* {
+  -webkit-font-smoothing: antialiased;
+  //hyphens: auto; 
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
 // colors class
 // only for basic text without color
 

@@ -6,7 +6,6 @@
 @mixin container_basic($height) { // $height = *vh
     height: $height;
     margin: 0 auto;
-    box-sizing: border-box;
   }
 
   // 980px container
@@ -43,7 +42,6 @@
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
-    height: 100vh;
   }
   
   // Clean Hero container 100vh without background.
@@ -54,6 +52,5 @@
   // Infinity container - (infinity height)
   .container_infinity {
     @include container_basic(auto);
-    height: auto;
     padding-bottom: 2.5em;
   }
