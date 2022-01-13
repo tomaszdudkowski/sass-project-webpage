@@ -373,12 +373,14 @@ section {
 
 .slide-in-left,
 .slide-in-right {
-  transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: opacity 100ms ease-in, transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
 }
 
 .slide-in-left.appear,
 .slide-in-right.appear {
   transform: translateX(0);
+  opacity: 1;
 }
 
 .background-img {
