@@ -1,9 +1,7 @@
 const header = document.querySelector(".container_navigation");
 const sectionOne = document.querySelector("#home");
 
-const faders = document.querySelector(".fade-in");
-
-// section observer for NAVIGATION SCROLL EFFECT
+//section observer for NAVIGATION SCROLL EFFECT
 const sectionOptions = {};
 const sectionObserver = new IntersectionObserver(function (
   entries,
@@ -25,22 +23,40 @@ sectionOptions);
 
 sectionObserver.observe(sectionOne);
 
-// fade-in observer for FADE-IN EFFECT
-const fadeinOptions = {
-  threshold: 1,
-  rootMargin: "0px 0px -100px 0px"
+/*******************************************************/
+
+// appearOn observer
+const appearOnOptions = {
+  threshold: 0,
+  rootMargin: "0px 0px -500px 0px"
 };
-const fadeinObserver = new IntersectionObserver(function(entries, fadeinObserver) {
+const appearObserver = new IntersectionObserver(function(entries, appearObserver) {
   entries.forEach(entry => {
     if(!entry.isIntersecting) {
+      console.log("no intersection");
       return; 
     } else {
       entry.target.classList.add("appear");
-      fadeinObserver.unobserve(entry.target);
+      appearObserver.unobserve(entry.target);
+      console.log(faders);
     }
   });
-}, fadeinOptions);
+}, appearOnOptions);
+
+// effects
+const faders = document.querySelectorAll(".fade-in");
 
 faders.forEach(fader => {
-  fadeinObserver.observe(fader);
+  appearObserver.observe(fader);
+});
+
+const slidersRight = document.querySelectorAll(".slide-in-right");
+const slidersLeft = document.querySelectorAll(".slide-in-left");
+
+slidersRight.forEach(slider => {
+  appearObserver.observe(slider);
+});
+
+slidersLeft.forEach(slider => {
+  appearObserver.observe(slider);
 });
