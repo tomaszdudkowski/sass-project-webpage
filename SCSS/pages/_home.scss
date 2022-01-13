@@ -2,10 +2,25 @@
 // Author: Tomasz Dudkowski
 // 2022
 
+@use "../themes/theme";
+
 html {
   // Smooth scroll always for html tag
   scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
+  // scroll-snap-type: y ;
+}
+
+body::-webkit-scrollbar {
+  width: .5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: theme.$accent-color;
+  border-radius: 30px;
 }
 
 section {
@@ -47,6 +62,39 @@ section {
   width: 100%;
   border-radius: 50%;
 }
+
+// fade-in effect
+.fade-in {
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+// slide-in effect
+.slide-in-right {
+  transform: translateX(-100%);
+  display: none;
+}
+
+.slide-in-left {
+  transform: translateX(100%);
+  display: none;
+}
+
+.slide-in-left,
+.slide-in-right {
+  display: block;
+  transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275); // bounce in
+}
+
+.slide-in-left.appear,
+.slide-in-right.appear {
+  transform: translateX(0);
+}
+
 
 // Background with image
 .background-img {
