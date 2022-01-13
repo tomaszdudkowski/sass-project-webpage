@@ -8,6 +8,7 @@ html {
   // Smooth scroll always for html tag
   scroll-behavior: smooth;
   // scroll-snap-type: y ;
+  overflow-x: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -76,17 +77,14 @@ section {
 // slide-in effect
 .slide-in-right {
   transform: translateX(-100%);
-  display: none;
 }
 
 .slide-in-left {
   transform: translateX(100%);
-  display: none;
 }
 
 .slide-in-left,
 .slide-in-right {
-  display: block;
   transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275); // bounce in
 }
 
