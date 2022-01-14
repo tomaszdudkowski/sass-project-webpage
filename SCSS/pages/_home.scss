@@ -123,3 +123,10 @@ section {
     padding-top: 15%;
 }
 
+@media (max-width: 800px) { 
+  .portfolio h2 {
+    padding-top: 70%;
+    font-size: 3rem;
+  }
+}
+
