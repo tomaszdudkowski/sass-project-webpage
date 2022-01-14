@@ -12,7 +12,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: .5rem;
+  max-width: .5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -20,8 +20,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: theme.$accent-color;
-  border-radius: 30px;
+  background: #4b4b4b;
+  border-radius: 5px;
 }
 
 section {

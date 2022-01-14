@@ -305,7 +305,7 @@ html {
 }
 
 body::-webkit-scrollbar {
-  width: 0.5rem;
+  max-width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -313,8 +313,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: #aeb0b152;
-  border-radius: 30px;
+  background: #4b4b4b;
+  border-radius: 5px;
 }
 
 section {
