@@ -50,6 +50,10 @@
 .col-center {
     @include col-content(35%, center);
     margin: 0 auto;
+
+    @media (max-width: 800px) {
+      width: 90%;
+    }
 }
 
 // Set content in center with 100% width

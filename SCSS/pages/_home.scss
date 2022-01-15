@@ -4,11 +4,17 @@
 
 @use "../themes/theme";
 
-html {
+html, body {
   // Smooth scroll always for html tag
   scroll-behavior: smooth;
   // scroll-snap-type: y ;
-  overflow-x: hidden;
+}
+
+// mobile 
+@media (max-width: 800px) {
+  html, body {
+    overflow-x: hidden;
+  }
 }
 
 body::-webkit-scrollbar {
@@ -121,5 +127,12 @@ section {
 
 .portfolio-content {
     padding-top: 15%;
+}
+
+@media (max-width: 800px) { 
+  .portfolio h2 {
+    padding-top: 70%;
+    font-size: 3rem;
+  }
 }
 
