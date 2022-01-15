@@ -49,6 +49,16 @@ section {
   object-position: $position;
 }
 
+@media (max-width: 800px) {
+  .container_full_hero.flex.accent-bg {
+    text-align: center;
+  }
+
+  .circle-img {
+    border-radius: 0;
+  }
+}
+
 // image cover class
 .cover-left {
   @include img-cover(left);
@@ -68,6 +78,13 @@ section {
   height: 65%;
   width: 100%;
   border-radius: 50%;
+}
+
+@media (max-width: 800px) {
+  .circle-img {
+    border-radius: 0;
+    padding-top: 4em;
+  }
 }
 
 // fade-in effect
