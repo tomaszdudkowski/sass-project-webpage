@@ -54,6 +54,11 @@
   .container_full_hero {
     height: auto;
 
+    & .col-2.flex.col-center.fade-in.appear {
+      padding-top: 2em;
+      padding-bottom: 2em;
+    }
+
     & .slide-in-left {
       order: -1;
     }
