@@ -63,25 +63,34 @@ header {
 
 .navigation {
   @include navigation();
+  padding-left: 3em;
+  padding-right: 5em;
   justify-content: space-between;
+
+  a:hover,
+  a:focus {
+    text-decoration: underline;
+    color: typography.$text-light-color;
+  }
+  
 }
 
 .navigation-scrolled {
   background-color: theme.$background-dark-color;
-  height: 6vh;
+  height: 4vh;
   padding-top: 0;
   transition: 500ms ease-in;
 
   nav {
-    padding-top: 1em;
+    padding-top: .1em;
   }
 
   nav ul {
-    padding-top: 1em;
+    padding-top: .5em;
   }
 
   h1 {
-    font-size: 1.7rem;
+    font-size: 1.2rem;
     padding-top: 0.4em;
     color: typography.$title-light-color;
   }
@@ -104,16 +113,15 @@ header {
   box-shadow: 0 3px 20px rgba(black, 0.3);
 
   @media (max-width: 800px) {
-
     height: 6vh;
 
     h1 {
       display: none;
     }
-  
+
     nav ul {
-      padding-top: .2em;
-      padding-top: .2em;
+      padding-top: 0.2em;
+      padding-top: 0.2em;
     }
   }
 }

@@ -2,7 +2,9 @@ const header = document.querySelector(".container_navigation");
 const sectionOne = document.querySelector("#home");
 
 //section observer for NAVIGATION SCROLL EFFECT
-const sectionOptions = {};
+const sectionOptions = {
+  rootMargin: "-5px 0px 0px 0px"
+};
 const sectionObserver = new IntersectionObserver(function (
   entries,
   sectionObserver
