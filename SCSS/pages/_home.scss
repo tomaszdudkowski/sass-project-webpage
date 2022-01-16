@@ -8,6 +8,7 @@ html, body {
   // Smooth scroll always for html tag
   scroll-behavior: smooth;
   // scroll-snap-type: y ;
+  overflow-x: hidden;
 }
 
 // mobile 
@@ -37,6 +38,24 @@ section {
 
 #information {
   height: 101vh;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  color: white;
+  font-family: 'Montserrat';
+}
+
+@media (max-width: 800px) {
+  .home-title {
+    font-size: 2rem;
+  }
 }
 
 // Set image cover position
@@ -75,9 +94,10 @@ section {
 // circle image class
 .circle-img {
   @include img-cover(center);
-  height: 65%;
-  width: 100%;
+  width: 50%;
+  height: 30%;
   border-radius: 50%;
+  padding-bottom: 2em;
 }
 
 @media (max-width: 800px) {
@@ -153,3 +173,6 @@ section {
   }
 }
 
+.text-center {
+  text-align: center;
+}

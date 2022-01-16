@@ -154,7 +154,7 @@ a:hover, a:focus {
 .container_hero {
   height: 100vh;
   margin: 0 auto;
-  background-image: url("/dist/img/7rn8ej4ze714s1fo8mw3oycisng1snms.jpg");
+  background-image: url("/dist/img/donald-giannatti-Wj1D-qiOseE-unsplash.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -261,6 +261,10 @@ a:hover, a:focus {
   position: absolute;
 }
 
+header {
+  position: relative;
+}
+
 .fixed {
   position: fixed;
 }
@@ -323,14 +327,19 @@ a:hover, a:focus {
 .navigation-scrolled h1 {
   font-size: 1.7rem;
   padding-top: 0.4em;
+  color: #fff;
 }
 .navigation-scrolled p {
   display: none;
+  color: #eaf3f7;
+}
+.navigation-scrolled a {
+  color: #eaf3f7;
 }
 .navigation-scrolled a:hover,
 .navigation-scrolled a:focus {
   text-decoration: underline;
-  color: #fff;
+  color: #eaf3f7;
 }
 @media (max-width: 800px) {
   .navigation-scrolled {
@@ -352,6 +361,7 @@ a:hover, a:focus {
 }
 html, body {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 @media (max-width: 800px) {
@@ -380,6 +390,23 @@ section {
   height: 101vh;
 }
 
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-title {
+  color: white;
+  font-family: "Montserrat";
+}
+
+@media (max-width: 800px) {
+  .home-title {
+    font-size: 2rem;
+  }
+}
 @media (max-width: 800px) {
   .container_full_hero.flex.accent-bg {
     text-align: center;
@@ -423,9 +450,10 @@ section {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  height: 65%;
-  width: 100%;
+  width: 50%;
+  height: 30%;
   border-radius: 50%;
+  padding-bottom: 2em;
 }
 
 @media (max-width: 800px) {
@@ -489,6 +517,10 @@ section {
     font-size: 3rem;
   }
 }
+.text-center {
+  text-align: center;
+}
+
 footer {
   text-align: center;
 }
