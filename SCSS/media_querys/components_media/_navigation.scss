@@ -1,0 +1,17 @@
+@media (max-width: 800px) {
+  height: 5vh;
+
+  h1 {
+    display: none;
+  }
+
+  nav ul {
+    padding-top: 0.7em;
+  }
+}
+
+@media (max-width: 800px) {
+  header {
+    position: relative;
+  }
+}

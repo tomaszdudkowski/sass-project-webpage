@@ -1,0 +1,128 @@
+// // File: _typography.scss
+// Author: Tomasz Dudkowski
+// 2022
+
+@use "../abstracts/variables/color";
+@use "../abstracts/variables/font_family";
+@use "../abstracts/variables/font_size";
+@use "../abstracts/variables/font_padding";
+@use "../abstracts/variables/font_weight";
+
+// Google Fonts imports
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300;1,400;1,500;1,600&display=swap");
+
+// Typographic tweaks!
+* {
+  -webkit-font-smoothing: antialiased;
+  //hyphens: auto; 
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+// colors class
+// only for basic text without color
+
+.light-color {
+  color: color.$text-light-color;
+}
+
+.dark-color {
+  color: color.$text-dark-color;
+}
+
+.title-light-color {
+  color: color.$title-light-color;
+}
+
+.title-dark-color {
+    color: color.$title-dark-color;
+}
+
+// headers tags
+
+%h {
+  font-family: font_family.$h-font-family;
+}
+
+h1 {
+  @extend %h;
+  font-size: font_size.$h1-font-size;
+  padding-top: font_padding.$h1-padding-top;
+  padding-bottom: font_padding.$h1-padding-bottom;
+  padding-left: font_padding.$h-padding-left;
+  padding-right: font_padding.$h-padding-right;
+}
+
+h2 {
+  @extend %h;
+  font-size: font_size.$h2-font-size;
+  padding-top: font_padding.$h2-padding-top;
+  padding-bottom: font_padding.$h2-padding-bottom;
+  padding-left: font_padding.$h-padding-left;
+  padding-right: font_padding.$h-padding-right;
+  font-weight: font_weight.$bold-weight;
+}
+
+h3 {
+  @extend %h;
+  font-size: font_size.$h3-font-size;
+  padding-top: font_padding.$h3-padding-top;
+  padding-bottom: font_padding.$h3-padding-bottom;
+  padding-left: font_padding.$h-padding-left;
+  padding-right: font_padding.$h-padding-right;
+}
+
+// paragraph tag
+
+%p {
+  font-family: font_family.$p-font-family;
+}
+
+p {
+  @extend %p;
+  font-size: font_size.$p-font-size;
+  padding-top: font_padding.$p-padding-top;
+  padding-bottom: font_padding.$p-padding-bottom;
+  padding-left: font_padding.$p-padding-left;
+  padding-right: font_padding.$p-padding-right;
+  line-height: font_size.$p-line-height;
+}
+// paragraph styles
+.basic {
+  font-weight: font_weight.$medium-weight;
+}
+
+.small {
+    font-weight: font_weight.$regular-weight;
+    font-family: font_family.$h-font-family;
+    padding-top: font_padding.$p-small-padding-top;
+    padding-bottom: font_padding.$p-small-padding-bottom;
+}
+
+.accent {
+  font-weight: font_weight.$bold-weight;
+  color: color.$text-accent-color;
+}
+
+.italic {
+  font-style: italic;
+}
+
+// link tag
+
+a {
+  font-family: font_family.$p-font-family;
+  font-size: font_size.$a-font-size;
+  font-weight: font_weight.$light-weight;
+  text-decoration: none;
+  color: color.$link-light-color;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: color.$link-dark-color;
+  }
+}

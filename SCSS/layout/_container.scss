@@ -2,12 +2,7 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-// Basic container
-@mixin container_basic($height) {
-  // $height = *vh
-  height: $height;
-  margin: 0 auto;
-}
+
 
 // 980px container
 .container {
@@ -50,20 +45,7 @@
   @include container_basic(100vh);
 }
 
-@media (max-width: 800px) {
-  .container_full_hero {
-    height: auto;
 
-    & .col-2.flex.col-center.fade-in.appear {
-      padding-top: 2em;
-      padding-bottom: 2em;
-    }
-
-    & .slide-in-left {
-      order: -1;
-    }
-  }
-}
 
 // Infinity container - (infinity height)
 .container_infinity {

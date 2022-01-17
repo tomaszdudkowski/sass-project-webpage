@@ -1,0 +1,35 @@
+@use "../variables/container_dimensions";
+@use "../variables/image";
+
+/*
+
+    Image Mixins
+
+*/
+
+// Set image cover position
+@mixin img-cover($position) {
+    // $position = left / center / right
+    margin: 0 auto;
+    box-sizing: content-box;
+    width: container_dimensions.$width-100;
+    height: container_dimensions.$height-100;
+    object-fit: cover;
+    object-position: $position;
+  }
+  
+  // circle image class
+  @mixin img-circle($orientation) {
+    width: images.$circle-width;
+    height: images.$circle-height;
+    position: relative;
+    overflow: hidden;
+    border-radius: images.$circle-border-radius;
+  
+    // edit to default portrait
+    // landscape option
+    @if $orientation == portrait {
+    } @else if $orientation == landscape {
+      display: inline-block;
+    }
+  }

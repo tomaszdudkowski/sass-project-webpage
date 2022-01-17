@@ -2,11 +2,7 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-// Basic column
-@mixin col($width) { // $width = *%
-  box-sizing: border-box;
-  width: $width;
-}
+
 
 // Column sizes
 .col-1 {
@@ -25,35 +21,21 @@
   @include col(100%);
 }
 
-@media (max-width: 800px) {
-  .col-1,
-  .col-2,
-  .col-3,
-  .col-4 {
-    width: 100%;
-  }
-}
+
 
 // Extra column padding
 .col-padding {
   padding: 1em;
 }
 
-// Set width and position of content in column
-@mixin col-content($width, $position) {
-    flex-direction: column;
-    justify-content: $position;
-    width: $width;
-} 
+
 
 // Set content in center with 35% width
 .col-center {
     @include col-content(35%, center);
     margin: 0 auto;
 
-    @media (max-width: 800px) {
-      width: 90%;
-    }
+    
 }
 
 // Set content in center with 100% width
