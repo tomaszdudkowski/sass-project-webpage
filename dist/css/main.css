@@ -350,14 +350,13 @@ header {
 }
 @media (max-width: 800px) {
   .navigation-scrolled {
-    height: 6vh;
+    height: 5vh;
   }
   .navigation-scrolled h1 {
     display: none;
   }
   .navigation-scrolled nav ul {
-    padding-top: 0.2em;
-    padding-top: 0.2em;
+    padding-top: 0.7em;
   }
 }
 
@@ -366,13 +365,15 @@ header {
     position: relative;
   }
 }
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
 @media (max-width: 800px) {
-  html, body {
+  html,
+body {
     overflow-x: hidden;
   }
 }
@@ -414,9 +415,14 @@ section {
     font-size: 2rem;
   }
 }
+.container_full_hero.accent-bg.text-center {
+  padding-top: 10em;
+}
+
 @media (max-width: 800px) {
-  .container_full_hero.flex.accent-bg {
+  .container_full_hero.accent-bg.text-center {
     text-align: center;
+    padding-top: 5em;
   }
 
   .circle-img {
@@ -428,8 +434,10 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: left;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: left;
+     object-position: left;
 }
 
 .cover-center {
@@ -437,8 +445,10 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .cover-right {
@@ -446,27 +456,50 @@ section {
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: right;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: right;
+     object-position: right;
 }
 
-.circle-img {
+.circle-image-portrait {
   margin: 0 auto;
   box-sizing: content-box;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  object-position: center;
-  width: 50%;
-  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
   border-radius: 50%;
-  padding-bottom: 2em;
+}
+
+.circle-image-landscape {
+  margin: 0 auto;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+  display: inline-block;
 }
 
 @media (max-width: 800px) {
-  .circle-img {
-    border-radius: 0;
-    padding-top: 4em;
+  .circle-image-portrait,
+.circle-image-landscape {
+    width: 200px;
+    height: 200px;
   }
 }
 .fade-in {
@@ -509,21 +542,6 @@ section {
   height: 100vh;
 }
 
-.portfolio h2 {
-  padding-top: 10%;
-  font-size: 4rem;
-}
-
-.portfolio-content {
-  padding-top: 15%;
-}
-
-@media (max-width: 800px) {
-  .portfolio h2 {
-    padding-top: 70%;
-    font-size: 3rem;
-  }
-}
 .text-center {
   text-align: center;
 }
@@ -556,6 +574,4 @@ footer a:focus {
 footer section.container-infinity {
   width: 60%;
   margin: 0 auto;
-}
-
-/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=main.css.map */

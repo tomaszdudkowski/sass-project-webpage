@@ -4,22 +4,24 @@
 
 @use "../themes/theme";
 
-html, body {
+html,
+body {
   // Smooth scroll always for html tag
   scroll-behavior: smooth;
   // scroll-snap-type: y ;
   overflow-x: hidden;
 }
 
-// mobile 
+// mobile
 @media (max-width: 800px) {
-  html, body {
+  html,
+  body {
     overflow-x: hidden;
   }
 }
 
 body::-webkit-scrollbar {
-  max-width: .5rem;
+  max-width: 0.5rem;
 }
 
 body::-webkit-scrollbar-track {
@@ -33,7 +35,7 @@ body::-webkit-scrollbar-thumb {
 
 section {
   // Scroll center snap
-    scroll-snap-align: center;
+  scroll-snap-align: center;
 }
 
 #information {
@@ -49,7 +51,7 @@ section {
 
 .home-title {
   color: white;
-  font-family: 'Montserrat';
+  font-family: "Montserrat";
 }
 
 @media (max-width: 800px) {
@@ -59,7 +61,8 @@ section {
 }
 
 // Set image cover position
-@mixin img-cover($position) { // $position = left / center / right
+@mixin img-cover($position) {
+  // $position = left / center / right
   margin: 0 auto;
   box-sizing: content-box;
   width: 100%;
@@ -68,9 +71,14 @@ section {
   object-position: $position;
 }
 
+.container_full_hero.accent-bg.text-center {
+  padding-top: 10em;
+}
+
 @media (max-width: 800px) {
-  .container_full_hero.flex.accent-bg {
+  .container_full_hero.accent-bg.text-center {
     text-align: center;
+    padding-top: 5em;
   }
 
   .circle-img {
@@ -92,18 +100,36 @@ section {
 }
 
 // circle image class
-.circle-img {
-  @include img-cover(center);
-  width: 50%;
-  height: 30%;
+@mixin circle-img($orientation) {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
   border-radius: 50%;
-  padding-bottom: 2em;
+
+  // edit to default portrait
+  // landscape option
+  @if $orientation == portrait {
+  } @else if $orientation == landscape {
+    display: inline-block;
+  }
+}
+
+.circle-image-portrait {
+  @include img-cover(center);
+  @include circle-img(portrait);
+}
+
+.circle-image-landscape {
+  @include img-cover(center);
+  @include circle-img(landscape);
 }
 
 @media (max-width: 800px) {
-  .circle-img {
-    border-radius: 0;
-    padding-top: 4em;
+  .circle-image-portrait,
+  .circle-image-landscape {
+    width: 200px;
+    height: 200px;
   }
 }
 
@@ -136,41 +162,19 @@ section {
   transform: translateX(0);
 }
 
-
 // Background with image
 .background-img {
   width: 100%;
 }
 
 .background-img {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/dist/img/uakaiifdzg8v14myjyg153jpezrkfe3d.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("/dist/img/uakaiifdzg8v14myjyg153jpezrkfe3d.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   width: 100%;
   height: 100vh;
-}
-
-@mixin portfolio {
-    h2 {
-        padding-top: 10%;
-        font-size: 4rem;
-    }
-}
-
-.portfolio {
-    @include portfolio();
-}
-
-.portfolio-content {
-    padding-top: 15%;
-}
-
-@media (max-width: 800px) { 
-  .portfolio h2 {
-    padding-top: 70%;
-    font-size: 3rem;
-  }
 }
 
 .text-center {
