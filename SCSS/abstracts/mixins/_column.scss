@@ -1,0 +1,15 @@
+// Column mixin
+
+// Set width and position of content in column
+@mixin col-content($width, $position) {
+  flex-direction: column;
+  justify-content: $position;
+  width: $width;
+}
+
+// Basic column
+@mixin col($width) {
+  // $width = *%
+  box-sizing: border-box;
+  width: $width;
+}

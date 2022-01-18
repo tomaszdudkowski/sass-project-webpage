@@ -1,0 +1,24 @@
+@media (max-width: 800px) {
+  .container_full_hero.accent-bg.text-center {
+    text-align: center;
+    padding-top: 5em;
+  }
+
+  .circle-img {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 800px) {
+  .home-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .circle-image-portrait,
+  .circle-image-landscape {
+    width: 200px;
+    height: 200px;
+  }
+}

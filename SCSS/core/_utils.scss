@@ -1,0 +1,69 @@
+// File: _utils.scss
+// Author: Tomasz Dudkowski
+// 2022
+
+@use "../abstracts/mixins/image" as *;
+
+// Image Utils
+
+// image cover class
+.cover-left {
+  @include img-cover(left);
+}
+
+.cover-center {
+  @include img-cover(center);
+}
+
+.cover-right {
+  @include img-cover(right);
+}
+
+// image circle class
+.circle-image-portrait {
+  @include img-cover(center);
+  @include img-circle(portrait);
+}
+
+.circle-image-landscape {
+  @include img-cover(center);
+  @include img-circle(landscape);
+}
+
+// Effects Utils
+
+// transition effects
+// fade-in effect
+.fade-in {
+  opacity: 0;
+  transition: opacity 800ms ease-in;
+}
+
+.fade-in.appear {
+  opacity: 1;
+}
+
+// slide-in effect
+.slide-in-right {
+  transform: translateX(-100%);
+}
+
+.slide-in-left {
+  transform: translateX(100%);
+}
+
+.slide-in-left,
+.slide-in-right {
+  transition: transform 1000ms cubic-bezier(0.175, 0.885, 0.32, 1.275); // bounce in
+}
+
+.slide-in-left.appear,
+.slide-in-right.appear {
+  transform: translateX(0);
+}
+
+// Text Utils
+
+.text-center {
+  text-align: center;
+}

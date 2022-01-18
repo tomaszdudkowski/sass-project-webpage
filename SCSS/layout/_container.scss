@@ -2,32 +2,28 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-// Basic container
-@mixin container_basic($height) {
-  // $height = *vh
-  height: $height;
-  margin: 0 auto;
-}
+@use "../abstracts/variables/container_dimensions" as *;
+@use "../abstracts/mixins/container" as *;
 
 // 980px container
 .container {
-  max-width: 980px;
-  width: 95%;
+  max-width: $max-width-980;
+  width: $width-95;
   margin: 0 auto;
 }
 
 // 980px 100 view height container
 .container_basic {
   @include container_basic(100vh);
-  max-width: 980px;
-  width: 95%;
+  max-width: $max-width-980;
+  width: $width-95;
 }
 
-// 14vh navigation container
+// 10vh navigation container
 .container_navigation {
   @include container_basic(10vh);
-  width: 100%;
-  max-width: 100%;
+  width: $width-100;
+  max-width: $max-width-100;
 
   // no bg (transparent option)
   z-index: 1;
@@ -42,27 +38,12 @@
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  width: 100%;
+  width: $width-100;
 }
 
 // Clean Hero container 100vh without background.
 .container_full_hero {
   @include container_basic(100vh);
-}
-
-@media (max-width: 800px) {
-  .container_full_hero {
-    height: auto;
-
-    & .col-2.flex.col-center.fade-in.appear {
-      padding-top: 2em;
-      padding-bottom: 2em;
-    }
-
-    & .slide-in-left {
-      order: -1;
-    }
-  }
 }
 
 // Infinity container - (infinity height)

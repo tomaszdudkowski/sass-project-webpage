@@ -2,17 +2,9 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-@mixin flex-direction($direction) { // direction: row / column
-    flex-direction: $direction;
-}
+@use "../abstracts/mixins/flex";
 
 // Set flex
 .flex {
-    display: flex;
-}
-
-@media (max-width: 800px) {
-    .flex {
-        flex-direction: column;
-    }
+  display: flex;
 }
