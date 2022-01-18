@@ -2,12 +2,9 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-@use "core/reset";
-@use "core/typography";
-@use "layout/flex";
-@use "layout/container";
-@use "layout/column";
-@use "layout/navigation";
-@use "themes/theme";
-@use "pages/home";
-@use "layout/footer";
+@use "core/all" as core;
+@use "layout/all" as layout;
+@use "components/all" as components;
+@use "media_querys/all" as media_querys;
+@use "pages/home" as home_page;
+@use "themes/theme" as theme;

@@ -2,11 +2,11 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-@use "../abstracts/variables/color";
-@use "../abstracts/variables/font_family";
-@use "../abstracts/variables/font_size";
-@use "../abstracts/variables/font_padding";
-@use "../abstracts/variables/font_weight";
+@use "../abstracts/variables/color" as *;
+@use "../abstracts/variables/font_family" as *;
+@use "../abstracts/variables/font_size" as *;
+@use "../abstracts/variables/font_padding" as *;
+@use "../abstracts/variables/font_weight" as *;
 
 // Google Fonts imports
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap");
@@ -26,85 +26,85 @@ p, h1, h2, h3, h4, h5, h6 {
 // only for basic text without color
 
 .light-color {
-  color: color.$text-light-color;
+  color: $text-light-color;
 }
 
 .dark-color {
-  color: color.$text-dark-color;
+  color: $text-dark-color;
 }
 
 .title-light-color {
-  color: color.$title-light-color;
+  color: $title-light-color;
 }
 
 .title-dark-color {
-    color: color.$title-dark-color;
+    color: $title-dark-color;
 }
 
 // headers tags
 
 %h {
-  font-family: font_family.$h-font-family;
+  font-family: $h-font-family;
 }
 
 h1 {
   @extend %h;
-  font-size: font_size.$h1-font-size;
-  padding-top: font_padding.$h1-padding-top;
-  padding-bottom: font_padding.$h1-padding-bottom;
-  padding-left: font_padding.$h-padding-left;
-  padding-right: font_padding.$h-padding-right;
+  font-size: $h1-font-size;
+  padding-top: $h1-padding-top;
+  padding-bottom: $h1-padding-bottom;
+  padding-left: $h-padding-left;
+  padding-right: $h-padding-right;
 }
 
 h2 {
   @extend %h;
-  font-size: font_size.$h2-font-size;
-  padding-top: font_padding.$h2-padding-top;
-  padding-bottom: font_padding.$h2-padding-bottom;
-  padding-left: font_padding.$h-padding-left;
-  padding-right: font_padding.$h-padding-right;
-  font-weight: font_weight.$bold-weight;
+  font-size: $h2-font-size;
+  padding-top: $h2-padding-top;
+  padding-bottom: $h2-padding-bottom;
+  padding-left: $h-padding-left;
+  padding-right: $h-padding-right;
+  font-weight: $bold-weight;
 }
 
 h3 {
   @extend %h;
-  font-size: font_size.$h3-font-size;
-  padding-top: font_padding.$h3-padding-top;
-  padding-bottom: font_padding.$h3-padding-bottom;
-  padding-left: font_padding.$h-padding-left;
-  padding-right: font_padding.$h-padding-right;
+  font-size: $h3-font-size;
+  padding-top: $h3-padding-top;
+  padding-bottom: $h3-padding-bottom;
+  padding-left: $h-padding-left;
+  padding-right: $h-padding-right;
 }
 
 // paragraph tag
 
 %p {
-  font-family: font_family.$p-font-family;
+  font-family: $p-font-family;
 }
 
 p {
   @extend %p;
-  font-size: font_size.$p-font-size;
-  padding-top: font_padding.$p-padding-top;
-  padding-bottom: font_padding.$p-padding-bottom;
-  padding-left: font_padding.$p-padding-left;
-  padding-right: font_padding.$p-padding-right;
-  line-height: font_size.$p-line-height;
+  font-size: $p-font-size;
+  padding-top: $p-padding-top;
+  padding-bottom: $p-padding-bottom;
+  padding-left: $p-padding-left;
+  padding-right: $p-padding-right;
+  line-height: $p-line-height;
 }
 // paragraph styles
 .basic {
-  font-weight: font_weight.$medium-weight;
+  font-weight: $medium-weight;
 }
 
 .small {
-    font-weight: font_weight.$regular-weight;
-    font-family: font_family.$h-font-family;
-    padding-top: font_padding.$p-small-padding-top;
-    padding-bottom: font_padding.$p-small-padding-bottom;
+    font-weight: $regular-weight;
+    font-family: $h-font-family;
+    padding-top: $p-small-padding-top;
+    padding-bottom: $p-small-padding-bottom;
 }
 
 .accent {
-  font-weight: font_weight.$bold-weight;
-  color: color.$text-accent-color;
+  font-weight: $bold-weight;
+  color: $text-accent-color;
 }
 
 .italic {
@@ -114,15 +114,15 @@ p {
 // link tag
 
 a {
-  font-family: font_family.$p-font-family;
-  font-size: font_size.$a-font-size;
-  font-weight: font_weight.$light-weight;
+  font-family: $p-font-family;
+  font-size: $a-font-size;
+  font-weight: $light-weight;
   text-decoration: none;
-  color: color.$link-light-color;
+  color: $link-light-color;
 
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: color.$link-dark-color;
+    color: $link-dark-color;
   }
 }

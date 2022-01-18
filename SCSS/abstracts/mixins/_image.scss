@@ -1,5 +1,5 @@
-@use "../variables/container_dimensions";
-@use "../variables/image";
+@use "../variables/container_dimensions" as *;
+@use "../variables/image" as *;
 
 /*
 
@@ -12,19 +12,19 @@
     // $position = left / center / right
     margin: 0 auto;
     box-sizing: content-box;
-    width: container_dimensions.$width-100;
-    height: container_dimensions.$height-100;
+    width: $width-100;
+    height: $height-100;
     object-fit: cover;
     object-position: $position;
   }
   
   // circle image class
   @mixin img-circle($orientation) {
-    width: images.$circle-width;
-    height: images.$circle-height;
+    width: $circle-width;
+    height: $circle-height;
     position: relative;
     overflow: hidden;
-    border-radius: images.$circle-border-radius;
+    border-radius: $circle-border-radius;
   
     // edit to default portrait
     // landscape option

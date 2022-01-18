@@ -1,5 +1,6 @@
-@media (max-width: 800px) {
-  height: 5vh;
+@use "../../abstracts/variables/media_dimensions" as *;
+
+@media (max-width: $max-width) {
 
   h1 {
     display: none;
@@ -10,8 +11,9 @@
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: $max-width) {
   header {
+    height: 5vh;
     position: relative;
   }
 }

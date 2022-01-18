@@ -2,7 +2,7 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-@use "../abstracts/variables/container_dimensions";
+@use "../abstracts/variables/container_dimensions" as *;
 
 * {
     margin: 0;
@@ -14,12 +14,12 @@
   }
 
   html, body {
-    height: container_dimensions.$height-100;
+    height: $height-100;
   }
 
   img, picture, video, canvas, svg {
     display: block;
-    max-width: container_dimensions.$max-width-100;
+    max-width: $max-width-100;
   }
 
   input, button, textarea, select {

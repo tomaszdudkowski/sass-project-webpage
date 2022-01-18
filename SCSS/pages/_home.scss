@@ -2,7 +2,8 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-@use "../themes/theme";
+@use "../themes/theme" as *;
+@use "../abstracts/mixins/image" as *;
 
 html,
 body {
@@ -94,12 +95,12 @@ section {
 
 .circle-image-portrait {
   @include img-cover(center);
-  @include circle-img(portrait);
+  @include img-circle(portrait);
 }
 
 .circle-image-landscape {
   @include img-cover(center);
-  @include circle-img(landscape);
+  @include img-circle(landscape);
 }
 
 @media (max-width: 800px) {

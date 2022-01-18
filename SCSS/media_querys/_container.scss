@@ -1,4 +1,6 @@
-@media (max-width: 800px) {
+@use "../abstracts/variables/media_dimensions" as *;
+
+@media (max-width: $max-width) {
   .container_full_hero {
     height: auto;
 

@@ -2,6 +2,8 @@
 // Author: Tomasz Dudkowski
 // 2022
 
+@use "../abstracts/variables/color" as *;
+
 // Primary background color
 .primary-bg {
     background-color: $primary-color;

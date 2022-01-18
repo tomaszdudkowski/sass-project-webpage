@@ -1,12 +1,11 @@
-@media (max-width: 800px) {
+@use "../abstracts/variables/media_dimensions" as *;
+@use "../abstracts/variables/column_dimensions" as *;
+
+@media (max-width: $width) {
     .col-1,
     .col-2,
     .col-3,
     .col-4 {
-      width: 100%;
+      width: $width-100;
     }
-  }
-
-  @media (max-width: 800px) {
-    width: 90%;
   }

@@ -1,0 +1,10 @@
+// File: _footer.scss
+// Author: Tomasz Dudkowski
+// 2022
+
+@use "../abstracts/mixins/footer" as *;
+
+footer {
+  @include footer();
+  text-align: center;
+}
