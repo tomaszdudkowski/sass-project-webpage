@@ -22,21 +22,15 @@
   @include col($col-100);
 }
 
-
-
 // Extra column padding
 .col-padding {
   padding: 1em;
 }
 
-
-
 // Set content in center with 35% width
 .col-center {
-    @include col-content($col-35, center);
-    margin: 0 auto;
-
-    
+  @include col-content($col-35, center);
+  margin: 0 auto;
 }
 
 // Set content in center with 100% width

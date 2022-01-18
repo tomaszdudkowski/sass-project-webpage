@@ -1,5 +1,4 @@
-
-// Basic container
+// Basic container mixin
 @mixin container_basic($height) {
   // $height = *vh
   height: $height;

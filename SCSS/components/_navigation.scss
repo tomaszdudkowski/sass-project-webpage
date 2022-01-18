@@ -4,14 +4,12 @@
 
 @use "../themes/theme" as *;
 @use "../abstracts/variables/color" as *;
-@use "../abstracts/mixins/navigation" as *;
 
+// Navigation component
 
 header {
   position: relative;
 }
-
-
 
 .fixed {
   position: fixed;
@@ -22,17 +20,37 @@ header {
 }
 
 .navigation {
-  @include navigation();
   padding-left: 3em;
   padding-right: 5em;
   justify-content: space-between;
 
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-    color: $text-light-color;
+  h1 {
+    font-size: 2.2rem;
+    padding-bottom: 0;
   }
-  
+}
+
+nav {
+  padding-top: 1em;
+
+  ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    justify-content: center;
+    padding-top: 0.7em;
+    display: flex;
+
+    li {
+      margin-left: 2em;
+
+      a:hover,
+      a:focus {
+        text-decoration: underline;
+        color: $text-light-color;
+      }
+    }
+  }
 }
 
 .navigation-scrolled {
@@ -42,11 +60,21 @@ header {
   transition: 500ms ease-in;
 
   nav {
-    padding-top: .1em;
-  }
+    padding-top: 0.1em;
 
-  nav ul {
-    padding-top: .5em;
+    ul {
+      padding-top: 0.5em;
+      
+      a {
+        color: $text-light-color;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: $text-light-color;
+        }
+      }
+    }
   }
 
   h1 {
@@ -60,19 +88,5 @@ header {
     color: $text-light-color;
   }
 
-  a {
-    color: $text-light-color;
-  }
-
-  a:hover,
-  a:focus {
-    text-decoration: underline;
-    color: $text-light-color;
-  }
-
   box-shadow: 0 3px 20px rgba(black, 0.3);
-
-  
 }
-
-

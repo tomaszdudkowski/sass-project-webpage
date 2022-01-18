@@ -1,3 +1,6 @@
-@mixin flex-direction($direction) { // direction: row / column
-    flex-direction: $direction;
+//Flex mixin
+
+@mixin flex-direction($direction) {
+  // direction: row / column
+  flex-direction: $direction;
 }

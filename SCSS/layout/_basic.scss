@@ -1,0 +1,25 @@
+html,
+body {
+  // Smooth scroll always for html tag
+  scroll-behavior: smooth;
+  // scroll-snap-type: y ;
+  overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+  max-width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #4b4b4b;
+  border-radius: 5px;
+}
+
+section {
+  // Scroll center snap
+  scroll-snap-align: center;
+}

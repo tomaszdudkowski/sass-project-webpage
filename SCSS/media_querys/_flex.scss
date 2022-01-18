@@ -1,7 +1,7 @@
 @use "../abstracts/variables/media_dimensions" as *;
 
 @media (max-width: $max-width) {
-    .flex {
-        flex-direction: column;
-    }
+  .flex {
+    flex-direction: column;
+  }
 }

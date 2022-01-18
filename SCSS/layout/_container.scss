@@ -46,8 +46,6 @@
   @include container_basic(100vh);
 }
 
-
-
 // Infinity container - (infinity height)
 .container_infinity {
   @include container_basic(auto);

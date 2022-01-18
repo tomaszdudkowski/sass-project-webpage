@@ -1,19 +1,41 @@
 @use "../../abstracts/variables/media_dimensions" as *;
 
 @media (max-width: $max-width) {
+  header {
+    position: relative;
 
-  h1 {
-    display: none;
-  }
+    h1 {
+      text-align: center;
+    }
 
-  nav ul {
-    padding-top: 0.7em;
+    p {
+      font-size: 1rem;
+      text-align: center;
+    }
+
+    nav ul {
+      text-align: center;
+      padding-top: 0.7em;
+
+      li {
+        margin: 0 auto;
+      }
+    }
   }
 }
 
-@media (max-width: $max-width) {
-  header {
-    height: 5vh;
-    position: relative;
+.navigation-scrolled {
+  @media (max-width: $max-width) {
+    nav ul {
+      padding-top: 0.7em;
+    }
+    header {
+      height: 5vh;
+      position: relative;
+      display: block;
+    }
+    h1 {
+      display: none;
+    }
   }
 }

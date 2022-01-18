@@ -2,10 +2,25 @@
 @use "../abstracts/variables/column_dimensions" as *;
 
 @media (max-width: $width) {
-    .col-1,
-    .col-2,
-    .col-3,
-    .col-4 {
-      width: $width-100;
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4 {
+    width: $width-100;
+  }
+
+  .col-center {
+    h2 {
+      text-align: center;
+      padding-left: 0;
+    }
+
+    p {
+      text-align: justify;
+    }
+
+    p.small {
+      text-align: center;
     }
   }
+}

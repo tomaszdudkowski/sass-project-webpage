@@ -15,10 +15,16 @@
 // Typographic tweaks!
 * {
   -webkit-font-smoothing: antialiased;
-  //hyphens: auto; 
+  //hyphens: auto;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   overflow-wrap: break-word;
 }
 
@@ -38,7 +44,7 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 .title-dark-color {
-    color: $title-dark-color;
+  color: $title-dark-color;
 }
 
 // headers tags
@@ -96,10 +102,10 @@ p {
 }
 
 .small {
-    font-weight: $regular-weight;
-    font-family: $h-font-family;
-    padding-top: $p-small-padding-top;
-    padding-bottom: $p-small-padding-bottom;
+  font-weight: $regular-weight;
+  font-family: $h-font-family;
+  padding-top: $p-small-padding-top;
+  padding-bottom: $p-small-padding-bottom;
 }
 
 .accent {

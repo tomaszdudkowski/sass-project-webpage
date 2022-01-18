@@ -2,9 +2,40 @@
 // Author: Tomasz Dudkowski
 // 2022
 
-@use "../abstracts/mixins/footer" as *;
+// Footer component
 
 footer {
-  @include footer();
+  h3 {
+    padding: 1em;
+  }
+
+  p {
+    padding-bottom: 1.5em;
+    font-size: 0.9rem;
+  }
+
+  ul {
+    list-style: none;
+    padding-bottom: 1.8em;
+
+    li {
+      padding-bottom: 0.3em;
+      a {
+        text-decoration: none;
+
+        &:hover,
+        &:focus {
+          text-decoration: underline;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  section.container-infinity {
+    width: 60%;
+    margin: 0 auto;
+  }
+
   text-align: center;
 }
