@@ -1,24 +1,22 @@
-@media (max-width: 800px) {
+@use "../abstracts/variables/media_dimensions" as *;
+@use "../abstracts/variables/image" as *;
+
+@media (max-width: $max-width) {
   .container_full_hero.accent-bg.text-center {
-    text-align: center;
-    padding-top: 5em;
+    padding-top: 4em;
   }
 
   .circle-img {
     border-radius: 0;
   }
-}
 
-@media (max-width: 800px) {
   .home-title {
     font-size: 2rem;
   }
-}
 
-@media (max-width: 800px) {
   .circle-image-portrait,
   .circle-image-landscape {
-    width: 200px;
-    height: 200px;
+    width: $circle-width-mobile;
+    height: $circle-height-mobile;
   }
 }

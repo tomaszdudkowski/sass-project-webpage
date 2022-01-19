@@ -51,3 +51,8 @@
   @include container_basic(auto);
   padding-bottom: 2.5em;
 }
+
+// Footer container 60vh
+.container_footer {
+  @include container_basic(60vh);
+}

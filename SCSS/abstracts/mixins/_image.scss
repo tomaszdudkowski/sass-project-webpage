@@ -1,12 +1,6 @@
 @use "../variables/container_dimensions" as *;
 @use "../variables/image" as *;
 
-/*
-
-    Image Mixins
-
-*/
-
 // Set image cover position
 @mixin img-cover($position) {
   // $position = left / center / right
